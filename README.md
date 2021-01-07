@@ -4,3 +4,8 @@
 ### One is Play.java and other is GameOfPlay.
 
 ### To run Program, both file should be place in same folder.
+
+Input: (Auto Renerated)
+<img src="https://github.com/hmgtech/Game-Of-Life/blob/master/1.PNG"/>
+Outut: 
+<img src="https://github.com/hmgtech/Game-Of-Life/blob/master/2.PNG"/>
