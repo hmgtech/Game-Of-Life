@@ -1,1 +1,6 @@
 # Game-Of-Life
+
+### Solution of Game of Life contains two life.
+### One is Play.java and other is GameOfPlay.
+
+### To run Program, both file should be place in same folder.
