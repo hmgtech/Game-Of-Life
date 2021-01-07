@@ -7,5 +7,6 @@
 
 Input: (Auto Renerated)
 <img src="https://github.com/hmgtech/Game-Of-Life/blob/master/1.PNG"/>
-Outut: 
+<br>
+Output: 
 <img src="https://github.com/hmgtech/Game-Of-Life/blob/master/2.PNG"/>
