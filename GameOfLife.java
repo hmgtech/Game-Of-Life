@@ -19,11 +19,11 @@ public class GameOfLife
 	  	Random rand = new Random(); //instance of random class
       	int binaryGridData = 2;
 		int[][] firstGeneration = new int[10][10];
-		for(int i=0; i<firstGeneration.length; i++)
+		for(int row=0; row<firstGeneration.length; row++)
 		{
-			for(int j=0; j<firstGeneration[0].length; j++)
+			for(int column=0; column<firstGeneration[0].length; column++)
 			{
-				firstGeneration[i][j] = rand.nextInt(binaryGridData); 
+				firstGeneration[row][column] = rand.nextInt(binaryGridData); 
 			}
 		}
 
@@ -36,11 +36,11 @@ public class GameOfLife
 
 	public static void printGeneration(int[][] firstGeneration)
 	{
-		for(int i=0; i<firstGeneration.length;i++)
+		for(int row=0; row<firstGeneration.length; row++)
 		{
-			for(int j=0;j<firstGeneration[0].length;j++)
+			for(int column=0; column<firstGeneration[0].length; column++)
 			{
-				System.out.print(firstGeneration[i][j]);
+				System.out.print(firstGeneration[row][column]);
 			}
 			System.out.println();
 		}
@@ -65,16 +65,16 @@ public class GameOfLife
 			{-1, -1},
 		};
 
-		for(int i=0; i < heightOfBoard;i++)
+		for(int row=0; row < heightOfBoard;row++)
 		{
-			for(int j = 0; j < widthOfBoard; j++)
+			for(int column = 0; column < widthOfBoard; column++)
 			{
 				int aliveCount = 0;
 				for(int[] dir : neighbourCellCordinate)
 				{
 
-					int xCordinate = dir[0] + i; //taking X Co-ordinate of Cell
-					int yCordinate = dir[1] + j; //taking Y Co-ordinate of Cell
+					int xCordinate = dir[0] + row; //taking X Co-ordinate of Cell
+					int yCordinate = dir[1] + column; //taking Y Co-ordinate of Cell
 
 					if( xCordinate >= 0 && xCordinate < heightOfBoard && 
 						yCordinate >=0  && yCordinate < widthOfBoard  && 
@@ -83,25 +83,25 @@ public class GameOfLife
 						aliveCount++;
 					}
 				}
-				if(firstGeneration[i][j] == 0 && aliveCount == 3)
+				if(firstGeneration[row][column] == 0 && aliveCount == 3)
 				{
-					nextGeneration[i][j] = 1;
+					nextGeneration[row][column] = 1;
 				}
-				else if(firstGeneration[i][j] == 1)
+				else if(firstGeneration[row][column] == 1)
 				{
 					if(aliveCount == 2 || aliveCount == 3)
 					{
-						nextGeneration[i][j] =1;
+						nextGeneration[row][column] =1;
 					}
 				}
 			}
 		}
 
-		for(int i=0; i<heightOfBoard;i++)
+		for(int row=0; row<heightOfBoard;row++)
 		{
-			for(int j = 0; j<widthOfBoard; j++)
+			for(int column = 0; column<widthOfBoard; column++)
 			{
-				firstGeneration[i][j] = nextGeneration[i][j];
+				firstGeneration[row][column] = nextGeneration[row][column];
 			}
 		}
 		System.out.println("Next Generatation Data: ");
